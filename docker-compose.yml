@@ -1,0 +1,13 @@
+services:
+  mongodb-to-postgresql-migration:
+    build:
+      context: .  # Build context is the current directory
+      dockerfile: Dockerfile  # Use the Dockerfile named "Dockerfile"
+    env_file:
+      - ./cred/.env  # Path to the .env file
+    volumes:
+      - app/mongo-to-pg/logs:/app/logs  # Mount logs
+      - app/mongo-to-pg/cred:/app/cred  # env and other credentials files
+      - app/mongo-to-pg/config:/app/config # configiguration file
+    #environment:
+    #  - GOOGLE_APPLICATION_CREDENTIALS=/app/cred/service-account-key.json  # Add environment variables if needed

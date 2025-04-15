@@ -1,0 +1,9 @@
+<db>
+<collections db_name="foodi-order-service">
+    <collection collection_no="1" collection_name="orders" id_field_name="_id" ts_field_name="updatedAt" collection_status="Pending">
+        <fields>
+            _id, orderId, userId, deliveryLat, deliveryLong, deliveryAddress, deliveryDistance, branchLat, branchLong, orderStatus, createdAt, updatedAt      
+        </fields>
+    </collection>
+</collections>
+</db>
